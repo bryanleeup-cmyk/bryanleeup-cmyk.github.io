@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f7f8f5">
+  <meta name="theme-color" content="#fbfcfa">
   <meta name="robots" content="noindex, nofollow">
   <meta name="referrer" content="no-referrer">
   <meta name="description" content="皇建的旅行手记。从欧洲与冰岛，到香港，再到斯里兰卡。一起走过的地方，和下一次出发。">
@@ -15,8 +15,8 @@
   <link rel="canonical" href="https://bryanleeup-cmyk.github.io/">
   <link rel="icon" href="data:,">
   <link rel="preload" as="image" href="assets/iceland-cover.webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=ff37a7d13d">
+  <script src="app.js?v=0628666448" defer></script>
   <title>皇建旅行攻略大全</title>
 </head>
 <body id="top">
@@ -26,79 +26,126 @@
     <a class="wordmark" href="#top" aria-label="皇建旅行首页"><span class="wordmark-seal">皇建</span><span>旅行手记<small>HUANG &amp; JIAN</small></span></a>
     <nav aria-label="主要导航">
       <a href="#journeys" class="nav-index">旅行目录</a>
-      <button class="icon-button" type="button" data-share="home" aria-label="分享旅行大全" title="分享旅行大全"><svg><use href="#share-2"></use></svg></button>
+      <button class="icon-button" type="button" data-share="home" aria-label="分享旅行大全" title="分享旅行大全" hidden><svg aria-hidden="true"><use href="#share-2"></use></svg></button>
     </nav>
   </header>
   <main>
     <section class="cover" aria-labelledby="cover-title">
       <img class="cover-image" src="assets/iceland-cover.webp" alt="冰岛教会山、瀑布与绿色山坡" width="1280" height="720" fetchpriority="high">
-      <div class="cover-shade"></div>
+      <div class="cover-shade" aria-hidden="true"></div>
       <div class="cover-inner">
-        <p class="cover-kicker">OUR TRAVEL JOURNAL <span>2026 — 2027</span></p>
+        <p class="cover-kicker">OUR TRAVEL JOURNAL <span>2026 / 2027</span></p>
         <h1 id="cover-title">皇建旅行<br>攻略大全<span class="title-dot" aria-hidden="true">.</span></h1>
         <p class="cover-note">一起走过的地方，和下一次出发。</p>
-        <a class="cover-link" href="#journeys">翻开我们的旅行 <svg><use href="#arrow-down"></use></svg></a>
+        <a class="cover-link" href="#journeys">我们的旅行 <svg aria-hidden="true"><use href="#arrow-down"></use></svg></a>
       </div>
-      <div class="cover-caption"><svg><use href="#map-pin"></use></svg><span>冰岛 · 教会山<small>KIRKJUFELL, ICELAND</small></span></div>
+      <div class="cover-caption"><svg aria-hidden="true"><use href="#map-pin"></use></svg><span>冰岛 · 教会山</span></div>
     </section>
+
+    <nav class="destination-strip" aria-label="目的地快捷入口">
+      <div class="destination-inner"><a class="destination destination-europe" href="https://bryanleeup-cmyk.github.io/iceland-2026-guide/" aria-label="打开欧洲与冰岛攻略，2026 年 09.25 至 10.09">
+  <span class="destination-period">2026 / 09<span class="destination-status">旅行回忆</span></span>
+  <span class="destination-name">欧洲与冰岛 <svg aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+  <span class="destination-dates">09.25 — 10.09</span>
+</a><a class="destination destination-hong-kong" href="https://bryanleeup-cmyk.github.io/hong-kong-trip/" aria-label="打开香港攻略，2026 年 10.31 至 11.01">
+  <span class="destination-period">2026 / 10<span class="destination-status">计划中</span></span>
+  <span class="destination-name">香港 <svg aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+  <span class="destination-dates">10.31 — 11.01</span>
+</a><a class="destination destination-sri-lanka" href="https://bryanleeup-cmyk.github.io/sri-lanka-loop/" aria-label="打开斯里兰卡攻略，2027 年 02.10 至 02.15">
+  <span class="destination-period">2027 / 02<span class="destination-status">计划中</span></span>
+  <span class="destination-name">斯里兰卡 <svg aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+  <span class="destination-dates">02.10 — 02.15</span>
+</a></div>
+    </nav>
 
     <section class="journal" id="journeys" aria-labelledby="journal-title">
       <div class="journal-heading">
         <div><p class="eyebrow">PLACES &amp; MEMORIES</p><h2 id="journal-title">我们的旅行</h2></div>
-        <div class="year-filter" role="tablist" aria-label="按年份查看旅行">
-          <button type="button" role="tab" aria-selected="true" aria-controls="trip-list" id="filter-all" data-year="all">全部 <span>3</span></button>
-          <button type="button" role="tab" aria-selected="false" aria-controls="trip-list" id="filter-2026" data-year="2026" tabindex="-1">2026 <span>2</span></button>
-          <button type="button" role="tab" aria-selected="false" aria-controls="trip-list" id="filter-2027" data-year="2027" tabindex="-1">2027 <span>1</span></button>
-        </div>
+        <p class="journal-count" id="filter-status" role="status">3 段旅程</p>
       </div>
-      <p class="sr-only" id="filter-status" role="status">共 3 段旅行</p>
-      <div id="trip-list" role="tabpanel" aria-labelledby="filter-all" tabindex="0">
-        <article class="trip" id="europe" data-year="2026">
-          <div class="trip-date"><span class="trip-year">2026</span><span class="trip-month">09 — 10</span><span class="trip-number">旅程 01</span></div>
-          <a class="trip-image-link" href="https://bryanleeup-cmyk.github.io/iceland-2026-guide/" aria-label="打开欧洲与冰岛攻略"><img src="assets/iceland-lagoon.webp" width="1280" height="855" alt="冰河湖的蓝色浮冰与皮划艇" loading="lazy"><span class="photo-label">ICELAND &amp; EUROPE</span></a>
-          <div class="trip-content">
-            <div class="trip-meta"><span class="status status-done">旅行回忆</span><span>09.25 — 10.09 · 15 天</span></div>
-            <h3><a href="https://bryanleeup-cmyk.github.io/iceland-2026-guide/">欧洲与冰岛</a></h3>
-            <p class="trip-subtitle">从里斯本海岸，到冰岛高地。</p>
-            <p class="trip-description">走过葡萄牙和巴黎，去冰岛看冰川、火山与瀑布。再经米兰、里斯本和哥本哈根，带着一路的风景回家。</p>
-            <ul class="trip-tags" aria-label="旅行主题"><li>冰川与火山</li><li>城市漫步</li><li>高地风景</li></ul>
-            <div class="trip-actions"><a class="open-trip" href="https://bryanleeup-cmyk.github.io/iceland-2026-guide/">打开攻略 <svg><use href="#arrow-up-right"></use></svg></a><button class="icon-button share-trip" type="button" data-share="europe" aria-label="分享欧洲与冰岛攻略" title="分享这段旅行"><svg><use href="#share-2"></use></svg></button></div>
-          </div>
-        </article>
-
-        <article class="trip" id="hong-kong" data-year="2026">
-          <div class="trip-date"><span class="trip-year">2026</span><span class="trip-month">10 — 11</span><span class="trip-number">旅程 02</span></div>
-          <a class="trip-image-link" href="https://bryanleeup-cmyk.github.io/hong-kong-trip/" aria-label="打开香港攻略"><img src="assets/hong-kong.jpg" width="960" height="720" alt="维多利亚港、香港天际线与红帆船" loading="lazy"><span class="photo-label">HONG KONG</span></a>
-          <div class="trip-content">
-            <div class="trip-meta"><span class="status status-next">计划中</span><span>10.31 — 11.01 · 2 天</span></div>
-            <h3><a href="https://bryanleeup-cmyk.github.io/hong-kong-trip/">香港</a></h3>
-            <p class="trip-subtitle">一盅早茶，一场现场。</p>
-            <p class="trip-description">山顶看城景，晚上去听 The Weeknd。第二天去东坝与浪茄湾，把一个周末留给城市和山海。</p>
-            <ul class="trip-tags" aria-label="旅行主题"><li>演唱会</li><li>麦理浩径</li><li>早茶与海鲜</li></ul>
-            <div class="trip-actions"><a class="open-trip" href="https://bryanleeup-cmyk.github.io/hong-kong-trip/">打开攻略 <svg><use href="#arrow-up-right"></use></svg></a><button class="icon-button share-trip" type="button" data-share="hong-kong" aria-label="分享香港攻略" title="分享这段旅行"><svg><use href="#share-2"></use></svg></button></div>
-          </div>
-        </article>
-
-        <article class="trip" id="sri-lanka" data-year="2027">
-          <div class="trip-date"><span class="trip-year">2027</span><span class="trip-month">02</span><span class="trip-number">旅程 03</span></div>
-          <a class="trip-image-link" href="https://bryanleeup-cmyk.github.io/sri-lanka-loop/" aria-label="打开斯里兰卡攻略"><img src="assets/sri-lanka.jpg" width="1280" height="720" alt="斯里兰卡唐加勒海岸、棕榈树与浪花" loading="lazy"><span class="photo-label">SRI LANKA</span></a>
-          <div class="trip-content">
-            <div class="trip-meta"><span class="status status-next">计划中</span><span>02.10 — 02.15 · 6 天</span></div>
-            <h3><a href="https://bryanleeup-cmyk.github.io/sri-lanka-loop/">斯里兰卡</a></h3>
-            <p class="trip-subtitle">走过茶山，把两天留给海。</p>
-            <p class="trip-description">搭山地火车穿过茶园，去雅拉看野生动物，再沿着南岸慢慢走。唐加勒、高跷渔夫与海上列车，都在这一程。</p>
-            <ul class="trip-tags" aria-label="旅行主题"><li>山地火车</li><li>野生动物</li><li>南岸海风</li></ul>
-            <div class="trip-actions"><a class="open-trip" href="https://bryanleeup-cmyk.github.io/sri-lanka-loop/">打开攻略 <svg><use href="#arrow-up-right"></use></svg></a><button class="icon-button share-trip" type="button" data-share="sri-lanka" aria-label="分享斯里兰卡攻略" title="分享这段旅行"><svg><use href="#share-2"></use></svg></button></div>
-          </div>
-        </article>
+      <div class="journal-toolbar" hidden>
+        <div class="year-filter" role="tablist" aria-label="按年份查看旅行"><button type="button" role="tab" aria-selected="true" aria-controls="trip-list" id="filter-all" data-year="all" tabindex="0">全部<span>3</span></button><button type="button" role="tab" aria-selected="false" aria-controls="trip-list" id="filter-2026" data-year="2026" tabindex="-1">2026<span>2</span></button><button type="button" role="tab" aria-selected="false" aria-controls="trip-list" id="filter-2027" data-year="2027" tabindex="-1">2027<span>1</span></button></div>
+        <button type="button" class="icon-button filter-share" data-share="selection" aria-label="分享当前目录" title="分享当前目录"><svg aria-hidden="true"><use href="#share-2"></use></svg></button>
       </div>
+      <div id="trip-list"><article class="trip trip-europe" id="europe" data-year="2026" aria-labelledby="title-europe">
+    <div class="trip-date"><span class="trip-year">2026</span><span class="trip-month">09 / 10 月</span><span class="trip-number">旅程 01</span></div>
+    <div class="trip-heading">
+      <div class="trip-meta"><span class="status status-completed">旅行回忆</span><span><time datetime="2026-09-25">09.25</time><span aria-hidden="true"> — </span><span class="sr-only">至</span><time datetime="2026-10-09">10.09</time> · 15 天</span></div>
+      <h3 id="title-europe"><a href="https://bryanleeup-cmyk.github.io/iceland-2026-guide/">欧洲与冰岛</a></h3>
+    </div>
+    <a class="trip-image-link" href="https://bryanleeup-cmyk.github.io/iceland-2026-guide/" aria-label="打开欧洲与冰岛攻略">
+      <span class="image-fallback" aria-hidden="true">欧洲与冰岛</span>
+      <img src="assets/iceland-lagoon.webp" width="1280" height="855" alt="冰河湖的蓝色浮冰与皮划艇" loading="lazy" decoding="async">
+      <span class="photo-label" aria-hidden="true">ICELAND &amp; EUROPE</span>
+    </a>
+    <div class="trip-details">
+      <p class="trip-subtitle">从里斯本海岸，到冰岛高地。</p>
+      <p class="trip-description">走过葡萄牙和巴黎，去冰岛看冰川、火山与瀑布。再经米兰、里斯本和哥本哈根，带着一路的风景回家。</p>
+      <ul class="trip-tags" aria-label="旅行主题"><li>冰川与火山</li><li>城市漫步</li><li>高地风景</li></ul>
+      <div class="trip-actions"><a class="open-trip" href="https://bryanleeup-cmyk.github.io/iceland-2026-guide/" aria-label="打开欧洲与冰岛完整攻略">打开攻略 <svg aria-hidden="true"><use href="#arrow-up-right"></use></svg></a><button type="button" class="icon-button share-trip" data-share="europe" aria-label="分享欧洲与冰岛攻略" title="分享欧洲与冰岛攻略" hidden><svg aria-hidden="true"><use href="#share-2"></use></svg></button></div>
+    </div>
+  </article>
+<article class="trip trip-hong-kong" id="hong-kong" data-year="2026" aria-labelledby="title-hong-kong">
+    <div class="trip-date"><span class="trip-year">2026</span><span class="trip-month">10 / 11 月</span><span class="trip-number">旅程 02</span></div>
+    <div class="trip-heading">
+      <div class="trip-meta"><span class="status status-planned">计划中</span><span><time datetime="2026-10-31">10.31</time><span aria-hidden="true"> — </span><span class="sr-only">至</span><time datetime="2026-11-01">11.01</time> · 2 天</span></div>
+      <h3 id="title-hong-kong"><a href="https://bryanleeup-cmyk.github.io/hong-kong-trip/">香港</a></h3>
+    </div>
+    <a class="trip-image-link" href="https://bryanleeup-cmyk.github.io/hong-kong-trip/" aria-label="打开香港攻略">
+      <span class="image-fallback" aria-hidden="true">香港</span>
+      <img src="assets/hong-kong.jpg" width="960" height="720" alt="维多利亚港、香港天际线与红帆船" loading="lazy" decoding="async">
+      <span class="photo-label" aria-hidden="true">HONG KONG</span>
+    </a>
+    <div class="trip-details">
+      <p class="trip-subtitle">一盅早茶，一场现场。</p>
+      <p class="trip-description">山顶看城景，晚上去听 The Weeknd。第二天去东坝与浪茄湾，把一个周末留给城市和山海。</p>
+      <ul class="trip-tags" aria-label="旅行主题"><li>演唱会</li><li>麦理浩径</li><li>早茶与海鲜</li></ul>
+      <div class="trip-actions"><a class="open-trip" href="https://bryanleeup-cmyk.github.io/hong-kong-trip/" aria-label="打开香港完整攻略">打开攻略 <svg aria-hidden="true"><use href="#arrow-up-right"></use></svg></a><button type="button" class="icon-button share-trip" data-share="hong-kong" aria-label="分享香港攻略" title="分享香港攻略" hidden><svg aria-hidden="true"><use href="#share-2"></use></svg></button></div>
+    </div>
+  </article>
+<article class="trip trip-sri-lanka" id="sri-lanka" data-year="2027" aria-labelledby="title-sri-lanka">
+    <div class="trip-date"><span class="trip-year">2027</span><span class="trip-month">02 月</span><span class="trip-number">旅程 03</span></div>
+    <div class="trip-heading">
+      <div class="trip-meta"><span class="status status-planned">计划中</span><span><time datetime="2027-02-10">02.10</time><span aria-hidden="true"> — </span><span class="sr-only">至</span><time datetime="2027-02-15">02.15</time> · 6 天</span></div>
+      <h3 id="title-sri-lanka"><a href="https://bryanleeup-cmyk.github.io/sri-lanka-loop/">斯里兰卡</a></h3>
+    </div>
+    <a class="trip-image-link" href="https://bryanleeup-cmyk.github.io/sri-lanka-loop/" aria-label="打开斯里兰卡攻略">
+      <span class="image-fallback" aria-hidden="true">斯里兰卡</span>
+      <img src="assets/sri-lanka.jpg" width="1280" height="720" alt="斯里兰卡唐加勒海岸、棕榈树与浪花" loading="lazy" decoding="async">
+      <span class="photo-label" aria-hidden="true">SRI LANKA</span>
+    </a>
+    <div class="trip-details">
+      <p class="trip-subtitle">走过茶山，把两天留给海。</p>
+      <p class="trip-description">搭山地火车穿过茶园，去雅拉看野生动物，再沿着南岸慢慢走。唐加勒、高跷渔夫与海上列车，都在这一程。</p>
+      <ul class="trip-tags" aria-label="旅行主题"><li>山地火车</li><li>野生动物</li><li>南岸海风</li></ul>
+      <div class="trip-actions"><a class="open-trip" href="https://bryanleeup-cmyk.github.io/sri-lanka-loop/" aria-label="打开斯里兰卡完整攻略">打开攻略 <svg aria-hidden="true"><use href="#arrow-up-right"></use></svg></a><button type="button" class="icon-button share-trip" data-share="sri-lanka" aria-label="分享斯里兰卡攻略" title="分享斯里兰卡攻略" hidden><svg aria-hidden="true"><use href="#share-2"></use></svg></button></div>
+    </div>
+  </article></div>
     </section>
 
-    <section class="closing" aria-label="旅行手记结语"><p>去过的，记下来。<br>想去的，慢慢出发。</p><span>皇建 · 我们的旅行手记</span><a href="#top" class="icon-button back-top" aria-label="回到顶部" title="回到顶部"><svg><use href="#arrow-up"></use></svg></a></section>
+    <section class="closing" aria-label="旅行手记结语">
+      <div><p>去过的，记下来。<br>想去的，慢慢出发。</p><span>皇建 · 我们的旅行手记</span></div>
+      <a href="#top" class="icon-button back-top" aria-label="回到顶部" title="回到顶部"><svg aria-hidden="true"><use href="#arrow-up"></use></svg></a>
+    </section>
   </main>
-  <footer><span>皇建旅行攻略大全 <span class="footer-period">/ 2026 — 2027</span></span><button type="button" class="text-button" id="credits-open">图片来源</button></footer>
-  <div class="toast" role="status" aria-live="polite" id="toast" hidden></div>
-  <dialog id="share-dialog" aria-labelledby="share-title"><div class="dialog-heading"><h2 id="share-title">分享这段旅行</h2><button type="button" class="icon-button" data-close aria-label="关闭分享"><svg><use href="#x"></use></svg></button></div><label for="share-url">链接</label><div class="url-field"><input id="share-url" type="url" readonly><button type="button" class="icon-button" id="copy-url" title="复制链接" aria-label="复制链接"><svg><use href="#copy"></use></svg></button></div><p id="share-hint" class="share-hint" role="status"></p></dialog>
-  <dialog id="credits-dialog" aria-labelledby="credits-title"><div class="dialog-heading"><h2 id="credits-title">图片来源</h2><button type="button" class="icon-button" data-close aria-label="关闭图片来源"><svg><use href="#x"></use></svg></button></div><ul class="credits-list"><li>冰岛教会山、冰河湖：沿用<a href="https://bryanleeup-cmyk.github.io/iceland-2026-guide/">冰岛攻略</a>配图。</li><li>维多利亚港：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-victoria-harbour.html" target="_blank" rel="noopener noreferrer">香港旅游发展局</a>。</li><li>唐加勒海滩：<a href="https://commons.wikimedia.org/wiki/File:Goyambokka_Beach,_Tangalle,_Sri_Lanka.jpg" target="_blank" rel="noopener noreferrer">Satdeep Gill</a>，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>，为版式裁切显示。</li></ul></dialog>
+  <footer><span>皇建旅行攻略大全 <span class="footer-period">/ 2026 / 2027</span></span><button type="button" class="text-button" id="credits-open" hidden>图片来源</button></footer>
+
+  <dialog id="share-dialog" aria-labelledby="share-title">
+    <div class="dialog-heading"><div><p class="eyebrow">SHARE A JOURNEY</p><h2 id="share-title">分享旅行</h2></div><button type="button" class="icon-button" data-close aria-label="关闭分享" title="关闭分享"><svg aria-hidden="true"><use href="#x"></use></svg></button></div>
+    <p class="share-name" id="share-name"></p>
+    <p class="share-detail" id="share-detail"></p>
+    <label for="share-url">分享链接</label>
+    <input id="share-url" type="url" readonly spellcheck="false">
+    <div class="share-actions">
+      <button type="button" class="primary-button" id="copy-url"><svg aria-hidden="true"><use href="#copy"></use></svg><span>复制链接</span></button>
+      <button type="button" class="secondary-button" id="native-share" hidden><svg aria-hidden="true"><use href="#share-2"></use></svg>更多分享</button>
+    </div>
+    <p id="share-hint" class="share-hint" role="status"></p>
+  </dialog>
+  <dialog id="credits-dialog" aria-labelledby="credits-title">
+    <div class="dialog-heading"><h2 id="credits-title">图片来源</h2><button type="button" class="icon-button" data-close aria-label="关闭图片来源" title="关闭图片来源"><svg aria-hidden="true"><use href="#x"></use></svg></button></div>
+    <ul class="credits-list"><li>冰岛教会山、冰河湖：沿用<a href="https://bryanleeup-cmyk.github.io/iceland-2026-guide/">冰岛攻略</a>配图。</li><li>维多利亚港：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-victoria-harbour.html" target="_blank" rel="noopener noreferrer">香港旅游发展局</a>。</li><li>唐加勒海滩：<a href="https://commons.wikimedia.org/wiki/File:Goyambokka_Beach,_Tangalle,_Sri_Lanka.jpg" target="_blank" rel="noopener noreferrer">Satdeep Gill</a>，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>，为版式裁切显示。</li></ul>
+  </dialog>
+  <script id="collection-data" type="application/json">{"title":"皇建旅行攻略大全","url":"https://bryanleeup-cmyk.github.io/","trips":[{"id":"europe","name":"欧洲与冰岛","english":"ICELAND & EUROPE","start":"2026-09-25","end":"2026-10-09","status":"completed","subtitle":"从里斯本海岸，到冰岛高地。","description":"走过葡萄牙和巴黎，去冰岛看冰川、火山与瀑布。再经米兰、里斯本和哥本哈根，带着一路的风景回家。","tags":["冰川与火山","城市漫步","高地风景"],"url":"https://bryanleeup-cmyk.github.io/iceland-2026-guide/","image":{"src":"assets/iceland-lagoon.webp","width":1280,"height":855,"alt":"冰河湖的蓝色浮冰与皮划艇"}},{"id":"hong-kong","name":"香港","english":"HONG KONG","start":"2026-10-31","end":"2026-11-01","status":"planned","subtitle":"一盅早茶，一场现场。","description":"山顶看城景，晚上去听 The Weeknd。第二天去东坝与浪茄湾，把一个周末留给城市和山海。","tags":["演唱会","麦理浩径","早茶与海鲜"],"url":"https://bryanleeup-cmyk.github.io/hong-kong-trip/","image":{"src":"assets/hong-kong.jpg","width":960,"height":720,"alt":"维多利亚港、香港天际线与红帆船"}},{"id":"sri-lanka","name":"斯里兰卡","english":"SRI LANKA","start":"2027-02-10","end":"2027-02-15","status":"planned","subtitle":"走过茶山，把两天留给海。","description":"搭山地火车穿过茶园，去雅拉看野生动物，再沿着南岸慢慢走。唐加勒、高跷渔夫与海上列车，都在这一程。","tags":["山地火车","野生动物","南岸海风"],"url":"https://bryanleeup-cmyk.github.io/sri-lanka-loop/","image":{"src":"assets/sri-lanka.jpg","width":1280,"height":720,"alt":"斯里兰卡唐加勒海岸、棕榈树与浪花"}}]}</script>
 </body>
 </html>
